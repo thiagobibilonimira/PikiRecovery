@@ -81,6 +81,24 @@ function tick() {
 }
 tick(); setInterval(tick, 1000);
 
+/* ---------- Compra de entradas ---------- */
+const PRICE = 15000, MAX_QTY = 10;
+let qty = 1;
+const qtyOut = $('#qty'), qtyTotal = $('#qtyTotal'), buyBtn = $('#buyBtn');
+function updateQty() {
+  qtyOut.textContent = qty;
+  qtyTotal.textContent = '$' + (qty * PRICE).toLocaleString('es-AR');
+  $('#qtyMinus').disabled = qty <= 1;
+  $('#qtyPlus').disabled = qty >= MAX_QTY;
+  buyBtn.textContent = '';
+  buyBtn.insertAdjacentHTML('beforeend', `<svg class="btn-ico" aria-hidden="true"><use href="#i-ticket"/></svg>Comprar ${qty > 1 ? qty + ' entradas' : 'entrada'}`);
+  // Lleva a la página de compra con la cantidad elegida
+  buyBtn.href = `compra.html?cant=${qty}`;
+}
+$('#qtyMinus').addEventListener('click', () => { if (qty > 1) { qty--; updateQty(); } });
+$('#qtyPlus').addEventListener('click', () => { if (qty < MAX_QTY) { qty++; updateQty(); } });
+updateQty();
+
 /* ---------- Funcionalidades de la app ---------- */
 const screen = $('#appScreen');
 screen.alt = $('.feature.active').dataset.alt;

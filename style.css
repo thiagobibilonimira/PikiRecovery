@@ -206,6 +206,15 @@ h1, h2, h3, h4, h5, p, blockquote, figure, ol, ul { margin: 0; }
 .countdown { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 26px 0; }
 .countdown div { display: grid; justify-items: center; gap: 4px; padding: 14px 4px; border-radius: var(--radius); background: var(--celeste-10); }
 .countdown strong { font: 800 28px/1 var(--font); color: var(--petroleo); font-variant-numeric: tabular-nums; }
+.buy { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 14px; }
+.qty { display: flex; align-items: center; gap: 4px; padding: 4px; border-radius: 12px; border: 1px solid var(--gris-3); background: var(--crema); }
+.qty-btn { width: 40px; height: 40px; border: 0; border-radius: 9px; background: var(--blanco); color: var(--petroleo); font: 600 20px/1 var(--font); cursor: pointer; transition: background .25s, color .25s; }
+.qty-btn:hover:not(:disabled) { background: var(--petroleo); color: var(--crema); }
+.qty-btn:disabled { opacity: .35; cursor: not-allowed; }
+.qty output { min-width: 34px; text-align: center; font: 800 18px var(--font); color: var(--petroleo); font-variant-numeric: tabular-nums; }
+.buy-total { display: grid; justify-items: end; }
+.buy-total strong { font: 800 24px/1.1 var(--font); color: var(--petroleo); font-variant-numeric: tabular-nums; }
+.buy-btn { margin-bottom: 10px; font-weight: 700; animation: glow 2.4s ease-in-out infinite; }
 .agenda { padding: 36px; border-radius: var(--radius-lg); background: rgba(255, 255, 255, .55); border: 1px solid var(--gris-3); --d: .12s; }
 .timeline { list-style: none; padding: 0; margin: 20px 0; }
 .timeline li { display: grid; grid-template-columns: 70px 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--gris-3); }
@@ -435,4 +444,55 @@ kbd { display: inline-block; padding: 1px 8px; border-radius: 6px; background: v
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; }
+}
+
+/* ---------- Página de compra ---------- */
+.nav-back { margin-left: auto; font: 600 11px var(--font); text-transform: uppercase; letter-spacing: .16em; text-decoration: none; padding: 10px 14px; border-radius: 8px; transition: background .25s; }
+.nav-back:hover { background: rgba(255, 255, 255, .1); }
+.checkout { min-height: 100vh; padding-top: 150px; }
+.checkout .title { font-size: clamp(32px, 4.6vw, 58px); }
+.steps-bar { list-style: none; padding: 0; margin: 0 auto 40px; display: flex; justify-content: center; gap: 12px; }
+.steps-bar li { display: flex; align-items: center; gap: 10px; padding: 8px 16px 8px 8px; border-radius: 99px; background: rgba(255, 255, 255, .7); border: 1px solid var(--gris-3); font: 600 11px var(--font); text-transform: uppercase; letter-spacing: .16em; color: var(--gris-1); }
+.steps-bar span { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: var(--gris-3); color: var(--petroleo); font: 700 13px var(--font); letter-spacing: 0; }
+.steps-bar li.on { color: var(--petroleo); border-color: var(--petroleo); }
+.steps-bar li.on span { background: var(--petroleo); color: var(--lima); }
+.steps-bar li.ok span { background: var(--lima); }
+.checkout-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 28px; align-items: start; }
+.checkout-grid > * { min-width: 0; }
+.form-t { font: italic 900 24px/1 var(--font); text-transform: uppercase; color: var(--petroleo); margin-bottom: 4px; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.row2 > * { min-width: 0; }
+.form .err { display: none; color: #c2324a; font: 500 12px var(--font); }
+.form label.invalid input { border-color: #c2324a; box-shadow: 0 0 0 4px rgba(194, 50, 74, .12); }
+.form label.invalid .err { display: block; }
+.form .check { display: flex; align-items: center; gap: 12px; font: var(--p3); color: var(--negro); cursor: pointer; }
+.form .check input { width: 20px; height: 20px; accent-color: var(--petroleo); padding: 0; flex: none; }
+.summary { position: sticky; top: 110px; }
+.summary .ticket-t { margin-bottom: 18px; }
+.summary .buy { margin: 22px 0 6px; }
+.lines { margin: 0; display: grid; }
+.lines > div { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--gris-3); font: var(--p2); }
+.lines dt { color: var(--gris-1); }
+.lines dd { margin: 0; color: var(--petroleo); font-weight: 600; text-align: right; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+.lines .total { border-bottom: 0; border-top: 2px solid var(--petroleo); margin-top: 4px; padding-top: 16px; }
+.lines .total dt, .lines .total dd { font: 800 22px var(--font); color: var(--petroleo); }
+.done-card { max-width: 640px; margin: 0 auto; padding: 48px 40px; border-radius: 28px; background: var(--blanco); border: 1px solid var(--gris-3); box-shadow: var(--shadow); text-align: center; display: grid; justify-items: center; gap: 6px; }
+.done-card .title { margin: 6px 0 4px; }
+.done-card .p1 { color: var(--petroleo); font-weight: 400; max-width: 480px; }
+.narrow-lines { width: 100%; text-align: left; margin: 18px 0 10px; }
+.done-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 16px 0 6px; }
+.done-check { width: 88px; height: 88px; margin-bottom: 8px; }
+.done-check circle { fill: var(--lima); stroke: none; transform-origin: center; animation: popIn .5s var(--ease) both; }
+.done-check path { fill: none; stroke: var(--petroleo); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 40; stroke-dashoffset: 40; animation: draw .5s .35s var(--ease) forwards; }
+@keyframes popIn { from { transform: scale(0); } }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@media (max-width: 960px) {
+  .checkout-grid { grid-template-columns: 1fr; }
+  .summary { position: static; order: -1; }
+}
+@media (max-width: 620px) {
+  .checkout { padding-top: 120px; }
+  .row2 { grid-template-columns: 1fr; }
+  .done-card { padding: 36px 20px; }
+  .steps-bar li { padding-right: 12px; }
 }

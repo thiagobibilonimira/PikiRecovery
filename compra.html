@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comprar entrada · PikiRecovery</title>
+  <meta name="description" content="Comprá tu entrada para el evento de PikiRecovery.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="checkout-page">
+  <!-- Íconos: Tabler Icons vía Iconify (https://icon-sets.iconify.design/tabler/) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M4 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm12-4v4M8 3v4m-4 4h16"/><path d="M8 15h2v2H8z"/></g></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2zm5-1h2m-1 13v.01"/></symbol>
+      <symbol id="i-game" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12 5h3.5a5 5 0 0 1 0 10H10l-4.015 4.227a2.3 2.3 0 0 1-3.923-2.035l1.634-8.173A5 5 0 0 1 8.6 5z"/><path d="m14 15l4.07 4.284a2.3 2.3 0 0 0 3.925-2.023l-1.6-8.232M8 9v2m-1-1h2m5 0h2"/></g></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M19 4v16H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M19 16H7a2 2 0 0 0-2 2M9 8h6"/></g></symbol>
+      <symbol id="i-snow" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m10 4l2 1l2-1"/><path d="M12 2v6.5l3 1.72m2.928-3.952l.134 2.232l1.866 1.232"/><path d="m20.66 7l-5.629 3.25l.01 3.458m4.887.56L18.062 15.5l-.134 2.232"/><path d="m20.66 17l-5.629-3.25l-2.99 1.738M14 20l-2-1l-2 1"/><path d="M12 22v-6.5l-3-1.72m-2.928 3.952L5.938 15.5l-1.866-1.232"/><path d="m3.34 17l5.629-3.25l-.01-3.458m-4.887-.56L5.938 8.5l.134-2.232"/><path d="m3.34 7l5.629 3.25l2.99-1.738"/></g></symbol>
+      <symbol id="i-drop" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.502 19.423c2.602 2.105 6.395 2.105 8.996 0s3.262-5.708 1.566-8.546l-4.89-7.26c-.42-.625-1.287-.803-1.936-.397a1.4 1.4 0 0 0-.41.397l-4.893 7.26C4.24 13.715 4.9 17.318 7.502 19.423"/></symbol>
+      <symbol id="i-wind" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h8.5a2.5 2.5 0 1 0-2.34-3.24M3 12h15.5a2.5 2.5 0 1 1-2.34 3.24M4 16h5.5a2.5 2.5 0 1 1-2.34 3.24"/></symbol>
+      <symbol id="i-vr" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 8v8.5A2.5 2.5 0 0 0 5.5 19h1.06a3 3 0 0 0 2.34-1.13l1.54-1.920a2 2 0 0 1 3.12 0l1.54 1.92A3 3 0 0 0 17.44 19h1.06a2.5 2.5 0 0 0 2.5-2.5V8a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2"/><path d="M7 12a1 1 0 1 0 2 0a1 1 0 1 0-2 0m8 0a1 1 0 1 0 2 0a1 1 0 1 0-2 0"/></g></symbol>
+      <symbol id="i-talk" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 4h18M4 4v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4m-8 12v4m-3 0h6"/><path d="m8 12l3-3l2 2l3-3"/></g></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h4.5L9 6l4 12l2-9l1.5 3H21"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0-6 0"/><path d="M17.657 16.657L13.414 20.9a2 2 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0"/></g></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0-18 0"/><path d="M12 7v5l3 3"/></g></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m3 7l9 6l9-6"/></g></symbol>
+      <symbol id="i-insta" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4z"/><path d="M8.5 12a3.5 3.5 0 1 0 7 0a3.5 3.5 0 0 0-7 0M17 7v.01"/></g></symbol>
+      <symbol id="i-monitor" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1zm4 15h10m-8-4v4m6-4v4"/></symbol>
+      <symbol id="i-zzz" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h6l-6 8h6m4-16h6l-6 8h6"/></symbol>
+      <symbol id="i-brain" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M15.5 13a3.5 3.5 0 0 0-3.5 3.5v1a3.5 3.5 0 0 0 7 0v-1.8M8.5 13a3.5 3.5 0 0 1 3.5 3.5v1a3.5 3.5 0 0 1-7 0v-1.8"/><path d="M17.5 16a3.5 3.5 0 0 0 0-7H17"/><path d="M19 9.3V6.5a3.5 3.5 0 0 0-7 0M6.5 16a3.5 3.5 0 0 1 0-7H7"/><path d="M5 9.3V6.5a3.5 3.5 0 0 1 7 0v10"/></g></symbol>
+      <symbol id="i-stretch" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5a1 1 0 1 0 2 0a1 1 0 1 0-2 0M5 20l5-.5l1-2m7 2.5v-5h-5.5L15 8.5l-5.5 1l1.5 2"/></symbol>
+      <symbol id="i-ticket" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3a2 2 0 0 0 0-4V7a2 2 0 0 1 2-2"/></symbol>
+      <symbol id="i-apple" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.286 7.008C5.07 7.008 4 10.238 4 12.928C4 16.157 6.143 21 8.286 21c1.165-.05 1.799-.538 3.214-.538c1.406 0 1.607.538 3.214.538S19 17.771 19 15.619c-.03-.011-2.649-.434-2.679-3.23c-.02-2.335 2.589-3.179 2.679-3.228c-1.096-1.606-3.162-2.113-3.750-2.153c-1.535-.12-3.032 1.077-3.75 1.077c-.729 0-2.036-1.077-3.214-1.077M12 4a2 2 0 0 0 2-2a2 2 0 0 0-2 2"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 3.71v16.58a.7.7 0 0 0 1.05.606l14.622-8.42a.55.55 0 0 0 0-.953L5.05 3.104A.7.7 0 0 0 4 3.711zM15 9L4.5 20.5m0-17L15 15"/></symbol>
+
+      <!-- Logo PikiRecovery: las partes oscuras toman currentColor para funcionar sobre fondos oscuros -->
+      <symbol id="logo" viewBox="0 0 213 184">
+        <path fill="#009DB6" d="M34 133.894C37.8285 131.012 41.8766 128.872 46.0437 126.639C55.5022 121.572 65.131 117.15 75.0101 112.983L83.847 109.255C94.1877 104.893 106.24 100.266 111.32 89.7882C112.969 86.3946 113.626 82.8307 113.31 79.0432C113.029 76.3718 112.163 74.0103 111.273 71.3451C116.385 77.529 119.143 85.4508 118.294 93.4485C117.495 100.962 114.11 107.759 108.927 113.233C102.206 120.33 93.2029 124.545 83.4715 125.564L67.3079 126.808L58.1264 127.704C49.7984 128.724 42.0469 130.962 34 133.89L34 133.894Z"/>
+        <path fill="currentColor" d="M87.6655 132.612L83.1024 131.683L69.1875 128.402L74.5631 128.053L82.8993 127.772C92.8728 127.435 102.627 126.765 112.526 125.25L130.35 122.526L141.388 121.426L150.428 121.563C154.503 121.888 158.358 122.548 162.18 123.73L157.486 120.661L146.936 115.24C141.179 112.722 135.217 111.746 128.819 111.229C130.736 110.556 132.65 109.932 134.658 109.772L140.418 109.312H143.883C148.346 109.312 152.546 110.273 156.836 111.444C162.351 112.95 167.326 115.388 171.98 118.67C173.849 119.99 175.584 121.323 177.064 123.047C178.777 125.041 180.56 128.039 179.31 129.947C178.061 131.855 174.686 131.176 172.111 130.283C161.155 126.483 151.341 127.466 140.215 129.971L130.811 132.089C124.894 133.42 119.006 134.247 112.937 134.535L110.858 134.633C103.045 135.002 95.3841 134.186 87.6634 132.612H87.6655Z"/>
+        <path fill="currentColor" d="M113.825 115.661C118.505 111.838 122.215 107.144 124.459 101.508C126.138 97.2955 126.765 92.874 125.67 88.4463C124.547 83.914 122.186 80.026 119.145 76.5196C114.061 70.6619 107.777 66.306 100.708 63.1751C97.563 61.7819 94.869 59.8923 92.3721 57.6723C96.2334 58.3761 99.5203 58.1873 102.994 57.2066C113.039 54.3711 122.623 58.0621 129.972 65.0934C140.442 75.11 143.577 90.8222 135.052 103.049C132.399 106.852 129.055 109.883 125.132 112.433C119.57 116.05 113.491 118.732 106.882 120.39L113.827 115.661H113.825Z"/>
+        <path fill="#009DB6" d="M129.603 62.0897C125.206 58.493 120.312 56.0576 114.771 54.9989C114.947 48.3328 113.388 42.4812 110.946 36.2973C109.212 32.44 107.183 28.948 104.705 25.4928C94.9139 13.5948 82.6178 4.3661 67.4575 5.27035e-06C76.6144 -0.00409821 85.4266 2.38823 93.6254 6.41989C100.848 9.9694 107.13 14.83 112.7 20.5871L117.618 26.1884C123.519 33.4536 128.148 41.5231 131.755 50.2019C135.032 58.0868 137.559 66.0742 138.969 74.6381C136.593 69.8453 133.796 65.5223 129.605 62.0918L129.603 62.0897Z"/>
+        <path fill="currentColor" d="M96.2601 53.9361C88.8677 54.6255 82.694 48.3841 83.1269 41.1127L83.4183 39.0959C84.8791 33.0412 90.6404 29.2147 96.7156 29.8918C102.711 30.5586 107.578 35.6551 107.524 41.9314C107.471 48.2261 102.643 53.3411 96.2601 53.9361Z"/>
+        <path fill="currentColor" d="M19.2915 158.819C19.2915 160.12 18.9928 161.315 18.3955 162.403C17.7982 163.47 16.8808 164.334 15.6435 164.995C14.4062 165.656 12.8702 165.987 11.0355 165.987H7.6435V174.051H2.1715V151.587H11.0355C12.8275 151.587 14.3422 151.896 15.5795 152.515C16.8168 153.134 17.7448 153.987 18.3635 155.075C18.9822 156.163 19.2915 157.411 19.2915 158.819ZM10.6195 161.635C11.6648 161.635 12.4435 161.39 12.9555 160.899C13.4675 160.408 13.7235 159.715 13.7235 158.819C13.7235 157.923 13.4675 157.23 12.9555 156.739C12.4435 156.248 11.6648 156.003 10.6195 156.003H7.6435V161.635H10.6195ZM24.8923 154.339C23.9323 154.339 23.1429 154.062 22.5243 153.507C21.9269 152.931 21.6283 152.227 21.6283 151.395C21.6283 150.542 21.9269 149.838 22.5243 149.283C23.1429 148.707 23.9323 148.419 24.8923 148.419C25.8309 148.419 26.5989 148.707 27.1963 149.283C27.8149 149.838 28.1243 150.542 28.1243 151.395C28.1243 152.227 27.8149 152.931 27.1963 153.507C26.5989 154.062 25.8309 154.339 24.8923 154.339ZM27.6123 156.195V174.051H22.1402V156.195H27.6123ZM42.4897 174.051L37.0498 166.563V174.051H31.5777V150.371H37.0498V163.459L42.4577 156.195H49.2098L41.7858 165.155L49.2738 174.051H42.4897ZM54.111 154.339C53.151 154.339 52.3617 154.062 51.743 153.507C51.1457 152.931 50.847 152.227 50.847 151.395C50.847 150.542 51.1457 149.838 51.743 149.283C52.3617 148.707 53.151 148.419 54.111 148.419C55.0497 148.419 55.8177 148.707 56.415 149.283C57.0337 149.838 57.343 150.542 57.343 151.395C57.343 152.227 57.0337 152.931 56.415 153.507C55.8177 154.062 55.0497 154.339 54.111 154.339ZM56.831 156.195V174.051H51.359V156.195H56.831Z"/>
+        <path fill="#079AB3" d="M72.2525 174.051L67.5805 165.571H66.2685V174.051H60.7965V151.587H69.9805C71.7512 151.587 73.2552 151.896 74.4925 152.515C75.7512 153.134 76.6898 153.987 77.3085 155.075C77.9272 156.142 78.2365 157.336 78.2365 158.659C78.2365 160.152 77.8098 161.486 76.9565 162.659C76.1245 163.832 74.8872 164.664 73.2445 165.155L78.4285 174.051H72.2525ZM66.2685 161.699H69.6605C70.6632 161.699 71.4098 161.454 71.9005 160.963C72.4125 160.472 72.6685 159.779 72.6685 158.883C72.6685 158.03 72.4125 157.358 71.9005 156.867C71.4098 156.376 70.6632 156.131 69.6605 156.131H66.2685V161.699ZM98.5035 164.835C98.5035 165.347 98.4715 165.88 98.4075 166.435H86.0235C86.1088 167.544 86.4608 168.398 87.0795 168.995C87.7195 169.571 88.4982 169.859 89.4155 169.859C90.7808 169.859 91.7302 169.283 92.2635 168.131H98.0875C97.7888 169.304 97.2448 170.36 96.4555 171.299C95.6875 172.238 94.7168 172.974 93.5435 173.507C92.3702 174.04 91.0582 174.307 89.6075 174.307C87.8582 174.307 86.3008 173.934 84.9355 173.187C83.5702 172.44 82.5035 171.374 81.7355 169.987C80.9675 168.6 80.5835 166.979 80.5835 165.123C80.5835 163.267 80.9568 161.646 81.7035 160.259C82.4715 158.872 83.5382 157.806 84.9035 157.059C86.2688 156.312 87.8368 155.939 89.6075 155.939C91.3355 155.939 92.8715 156.302 94.2155 157.027C95.5595 157.752 96.6048 158.787 97.3515 160.131C98.1195 161.475 98.5035 163.043 98.5035 164.835ZM92.9035 163.395C92.9035 162.456 92.5835 161.71 91.9435 161.155C91.3035 160.6 90.5035 160.323 89.5435 160.323C88.6262 160.323 87.8475 160.59 87.2075 161.123C86.5888 161.656 86.2048 162.414 86.0555 163.395H92.9035ZM100.302 165.123C100.302 163.267 100.676 161.646 101.422 160.259C102.19 158.872 103.246 157.806 104.59 157.059C105.956 156.312 107.513 155.939 109.262 155.939C111.502 155.939 113.369 156.526 114.862 157.699C116.377 158.872 117.369 160.526 117.838 162.659H112.014C111.524 161.294 110.574 160.611 109.166 160.611C108.164 160.611 107.364 161.006 106.766 161.795C106.169 162.563 105.87 163.672 105.87 165.123C105.87 166.574 106.169 167.694 106.766 168.483C107.364 169.251 108.164 169.635 109.166 169.635C110.574 169.635 111.524 168.952 112.014 167.587H117.838C117.369 169.678 116.377 171.32 114.862 172.515C113.348 173.71 111.481 174.307 109.262 174.307C107.513 174.307 105.956 173.934 104.59 173.187C103.246 172.44 102.19 171.374 101.422 169.987C100.676 168.6 100.302 166.979 100.302 165.123ZM128.893 174.307C127.144 174.307 125.565 173.934 124.157 173.187C122.771 172.44 121.672 171.374 120.861 169.987C120.072 168.6 119.677 166.979 119.677 165.123C119.677 163.288 120.083 161.678 120.893 160.291C121.704 158.883 122.813 157.806 124.221 157.059C125.629 156.312 127.208 155.939 128.957 155.939C130.707 155.939 132.285 156.312 133.693 157.059C135.101 157.806 136.211 158.883 137.021 160.291C137.832 161.678 138.237 163.288 138.237 165.123C138.237 166.958 137.821 168.579 136.989 169.987C136.179 171.374 135.059 172.44 133.629 173.187C132.221 173.934 130.643 174.307 128.893 174.307ZM128.893 169.571C129.939 169.571 130.824 169.187 131.549 168.419C132.296 167.651 132.669 166.552 132.669 165.123C132.669 163.694 132.307 162.595 131.581 161.827C130.877 161.059 130.003 160.675 128.957 160.675C127.891 160.675 127.005 161.059 126.301 161.827C125.597 162.574 125.245 163.672 125.245 165.123C125.245 166.552 125.587 167.651 126.269 168.419C126.973 169.187 127.848 169.571 128.893 169.571ZM149.172 168.931L153.044 156.195H158.868L152.532 174.051H145.78L139.444 156.195H145.3L149.172 168.931ZM178.003 164.835C178.003 165.347 177.971 165.88 177.908 166.435H165.523C165.609 167.544 165.961 168.398 166.579 168.995C167.219 169.571 167.998 169.859 168.915 169.859C170.281 169.859 171.23 169.283 171.764 168.131H177.587C177.289 169.304 176.745 170.36 175.956 171.299C175.188 172.238 174.217 172.974 173.044 173.507C171.87 174.04 170.558 174.307 169.107 174.307C167.358 174.307 165.801 173.934 164.436 173.187C163.07 172.44 162.003 171.374 161.236 169.987C160.467 168.6 160.083 166.979 160.083 165.123C160.083 163.267 160.457 161.646 161.204 160.259C161.971 158.872 163.038 157.806 164.404 157.059C165.769 156.312 167.337 155.939 169.107 155.939C170.835 155.939 172.372 156.302 173.715 157.027C175.059 157.752 176.105 158.787 176.852 160.131C177.62 161.475 178.003 163.043 178.003 164.835ZM172.404 163.395C172.404 162.456 172.083 161.71 171.443 161.155C170.803 160.6 170.003 160.323 169.044 160.323C168.126 160.323 167.348 160.59 166.708 161.123C166.089 161.656 165.705 162.414 165.555 163.395H172.404ZM186.362 159.171C187.002 158.19 187.802 157.422 188.762 156.867C189.722 156.291 190.789 156.003 191.962 156.003V161.795H190.458C189.093 161.795 188.069 162.094 187.386 162.691C186.704 163.267 186.362 164.291 186.362 165.763V174.051H180.89V156.195H186.362V159.171ZM212.818 156.195L201.618 182.531H195.73L199.826 173.443L192.562 156.195H198.674L202.802 167.363L206.898 156.195H212.818Z"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="nav" id="nav">
+    <div class="nav-pill">
+      <a href="index.html" class="logo" aria-label="PikiRecovery, ir al inicio">
+        <svg class="brand" viewBox="0 0 213 184" aria-hidden="true"><use href="#logo"/></svg>
+      </a>
+      <a class="nav-back" href="index.html#evento">← Volver al evento</a>
+    </div>
+  </header>
+
+  <main class="section tint checkout">
+    <div class="wrap">
+      <!-- Paso 1: datos -->
+      <div id="stepForm">
+        <div class="center">
+          <span class="label">Compra de entradas</span>
+          <h1 class="title">Completá <em>tus datos</em></h1>
+        </div>
+        <ol class="steps-bar" aria-label="Pasos de la compra">
+          <li class="on"><span>1</span>Datos</li>
+          <li><span>2</span>Confirmación</li>
+        </ol>
+
+        <div class="checkout-grid">
+          <form class="form" id="buyForm" novalidate>
+            <h2 class="form-t">Datos del titular</h2>
+            <div class="row2">
+              <label><span class="mono">Nombre</span><input id="nombre" name="nombre" required autocomplete="given-name"><small class="err">Ingresá tu nombre.</small></label>
+              <label><span class="mono">Apellido</span><input id="apellido" name="apellido" required autocomplete="family-name"><small class="err">Ingresá tu apellido.</small></label>
+            </div>
+            <div class="row2">
+              <label><span class="mono">DNI</span><input id="dni" name="dni" required inputmode="numeric" pattern="\d{7,8}" maxlength="8" placeholder="Sin puntos"><small class="err">El DNI tiene 7 u 8 números, sin puntos.</small></label>
+              <label><span class="mono">Teléfono</span><input id="telefono" name="telefono" type="tel" required autocomplete="tel" placeholder="11 5555 0123" minlength="8"><small class="err">Ingresá un teléfono de contacto.</small></label>
+            </div>
+            <label><span class="mono">Email</span><input id="email" name="email" type="email" required autocomplete="email" placeholder="nombre@correo.com"><small class="err">Ingresá un email válido.</small></label>
+            <div class="row2">
+              <label><span class="mono">Perfil</span>
+                <select id="perfil" name="perfil">
+                  <option>Deportista</option>
+                  <option>Familiar</option>
+                  <option>Entrenador/a</option>
+                  <option>Profesional de la salud</option>
+                  <option>Otro</option>
+                </select>
+              </label>
+              <label><span class="mono">Deporte (opcional)</span><input id="deporte" name="deporte" placeholder="Fútbol, running…"></label>
+            </div>
+            <label class="check"><input type="checkbox" id="novedades" name="novedades" checked><span>Quiero recibir novedades de PikiRecovery por mail.</span></label>
+            <button class="btn btn-lima big full buy-btn" type="submit"><svg class="btn-ico" aria-hidden="true"><use href="#i-ticket"/></svg>Confirmar compra</button>
+            <p class="p3 muted">Al confirmar se descarga tu entrada en PDF. Presentala en la acreditación desde el celular o impresa.</p>
+          </form>
+
+          <aside class="ticket summary">
+            <span class="mono">Entrada general</span>
+            <h2 class="ticket-t">PikiRecovery Day</h2>
+            <ul class="ticket-info">
+              <li><svg><use href="#i-calendar"/></svg><span><span class="mono">Fecha</span>27 de febrero de 2027</span></li>
+              <li><svg><use href="#i-clock"/></svg><span><span class="mono">Horario</span>10 a 17 h</span></li>
+              <li><svg><use href="#i-pin"/></svg><span><span class="mono">Lugar</span>La Rural, Pabellón Ocre · Av. Santa Fe 4201</span></li>
+            </ul>
+            <div class="buy">
+              <div class="qty" role="group" aria-label="Cantidad de entradas">
+                <button type="button" class="qty-btn" id="qtyMinus" aria-label="Quitar una entrada">−</button>
+                <output id="qty" aria-live="polite">1</output>
+                <button type="button" class="qty-btn" id="qtyPlus" aria-label="Sumar una entrada">+</button>
+              </div>
+              <span class="mono">Cantidad</span>
+            </div>
+            <dl class="lines">
+              <div><dt id="lineQty">1 × Entrada general</dt><dd id="lineSub">$15.000</dd></div>
+              <div><dt>Cargo por servicio</dt><dd id="lineFee">$1.500</dd></div>
+              <div class="total"><dt>Total</dt><dd id="lineTotal">$16.500</dd></div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+
+      <!-- Paso 2: confirmación -->
+      <div id="stepDone" class="done" hidden>
+        <ol class="steps-bar" aria-label="Pasos de la compra">
+          <li class="ok"><span>✓</span>Datos</li>
+          <li class="on"><span>2</span>Confirmación</li>
+        </ol>
+        <div class="done-card">
+          <svg class="done-check" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-15"/></svg>
+          <span class="mono" id="doneOrder">N.º de orden #PR-000000</span>
+          <h1 class="title">¡Tu entrada está <em>confirmada!</em></h1>
+          <p class="p1" id="doneMsg">Gracias por tu compra.</p>
+          <dl class="lines narrow-lines" id="doneLines"></dl>
+          <div class="done-actions">
+            <a class="btn btn-lima big" id="pdfLink" href="entrada-pikirecovery.pdf" download="entrada-pikirecovery.pdf"><svg class="btn-ico" aria-hidden="true"><use href="#i-ticket"/></svg>Descargar entrada (PDF)</a>
+            <a class="btn btn-outline" href="index.html">Volver al inicio</a>
+          </div>
+          <p class="p3 muted">Si la descarga no empezó sola, tocá “Descargar entrada”.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap foot-bottom"><span>© 2027 PikiRecovery · Trabajo Integrador Final</span><span>pikirecovery@gmail.com</span></div>
+  </footer>
+
+  <script src="compra.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-/* PikiRecovery · interacciones */
+/* Piki · interacciones */
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;

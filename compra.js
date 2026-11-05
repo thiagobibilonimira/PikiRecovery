@@ -1,4 +1,4 @@
-/* PikiRecovery · compra de entradas */
+/* Piki · compra de entradas */
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 
@@ -57,7 +57,7 @@ form.addEventListener('submit', e => {
     + `<div class="total"><dt>Total</dt><dd>${money(qty * (PRICE + FEE))}</dd></div>`;
 
   const link = $('#pdfLink');
-  link.download = `entrada-pikirecovery-${slug || 'titular'}.pdf`;
+  link.download = `entrada-piki-${slug || 'titular'}.pdf`;
 
   $('#stepForm').hidden = true;
   $('#stepDone').hidden = false;

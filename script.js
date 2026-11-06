@@ -14,6 +14,15 @@ function countTo(el, to, ms = 800) {
   requestAnimationFrame(step);
 }
 
+/* ---------- Grilla de 12 columnas: tecla G para verla ---------- */
+const overlay = document.createElement('div');
+overlay.className = 'grid-overlay';
+overlay.innerHTML = `<div class="wrap">${'<span></span>'.repeat(12)}</div>`;
+document.body.append(overlay);
+addEventListener('keydown', e => {
+  if (e.key.toLowerCase() === 'g' && !e.target.closest('input, textarea, select')) document.body.classList.toggle('show-grid');
+});
+
 /* ---------- Navegación ---------- */
 const nav = $('#nav'), burger = $('#burger'), links = $('#navLinks');
 burger.addEventListener('click', () => {

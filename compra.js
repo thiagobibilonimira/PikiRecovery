@@ -2,6 +2,15 @@
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 
+// Grilla de 12 columnas: tecla G para verla
+const overlay = document.createElement('div');
+overlay.className = 'grid-overlay';
+overlay.innerHTML = `<div class="wrap">${'<span></span>'.repeat(12)}</div>`;
+document.body.append(overlay);
+addEventListener('keydown', e => {
+  if (e.key.toLowerCase() === 'g' && !e.target.closest('input, textarea, select')) document.body.classList.toggle('show-grid');
+});
+
 const PRICE = 15000, FEE = 1500, MAX_QTY = 10;
 const money = n => '$' + n.toLocaleString('es-AR');
 

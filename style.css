@@ -533,3 +533,107 @@ kbd { display: inline-block; padding: 1px 8px; border-radius: 6px; background: v
   .done-card { padding: 36px 20px; }
   .steps-bar li { padding-right: 12px; }
 }
+
+/* ==========================================================
+   Alineación a la grilla de 12 columnas
+   --col = ancho de una columna dentro del contenedor (.wrap / .nav-pill)
+   Los botones miden N columnas + (N − 1) medianiles.
+   Las tarjetas usan un relleno lateral de 1 columna + 1 medianil,
+   así su contenido también arranca y termina sobre la grilla.
+   ========================================================== */
+:root { --col: calc((100cqw - 11 * var(--gutter)) / 12); --pad-col: calc(var(--col) + var(--gutter)); }
+.wrap, .nav-pill { container-type: inline-size; }
+.hero-ctas .btn, .stores .store, .play .btn, .breath .btn, .done-actions .btn {
+  width: calc(var(--col) * var(--span, 2) + var(--gutter) * (var(--span, 2) - 1));
+  padding-inline: 0; justify-content: center; flex: none;
+}
+
+/* Navegación: "Jugar" ocupa exactamente la última columna */
+.nav-pill { padding: 0 0 0 22px; min-height: 72px; gap: 24px; }
+.nav .btn-white { align-self: stretch; width: var(--col); padding: 0; border-radius: 0 18px 18px 0; order: 2; }
+.nav .burger { order: 1; }
+.nav-back { margin-right: 22px; }
+
+/* Inicio */
+.hero-ctas { gap: var(--gutter); }
+.hero-ctas .btn { --span: 2; }
+
+/* Tienda de la app: 2 + 2 columnas centradas */
+.stores { gap: var(--gutter); }
+.stores .store { --span: 2; padding-inline: 0 0; justify-content: center; }
+
+/* Filtros de novedades: 6 filtros × 2 columnas = 12 */
+.filters { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--gutter); }
+.filter { padding-inline: 0; text-align: center; }
+
+/* Evento: entrada en columnas 1–6, agenda en 7–12 */
+.event-grid > :first-child { grid-column: 1 / 7; }
+.event-grid > :last-child { grid-column: 7 / 13; }
+.ticket, .agenda, .form, .summary, .quote { padding-inline: var(--pad-col); }
+
+/* Contacto: texto en 1–5, formulario en 6–12 */
+#contacto .split > :first-child { grid-column: 1 / 6; }
+#contacto .split > :last-child { grid-column: 6 / 13; }
+
+/* Tarjetas que ocupan las 12 columnas: el contenido va de la 2 a la 11 */
+.checkin, .breath, .play-in { padding-inline: var(--pad-col); }
+.play-in { max-width: none; }
+.checkin { grid-template-columns: repeat(10, minmax(0, 1fr)); }
+.checkin > :first-child { grid-column: 1 / 6; }
+.checkin > :last-child { grid-column: 7 / 11; }
+.breath .btn { --span: 2; }
+.play .btn { --span: 3; }
+.play-in > :not(.btn) { max-width: calc(var(--col) * 6 + var(--gutter) * 5); }
+
+/* Compra: formulario en 1–7, resumen en 8–12; confirmación en 3–10 */
+.done-card { max-width: none; width: calc(var(--col) * 8 + var(--gutter) * 7); padding-inline: var(--pad-col); }
+.done-actions { gap: var(--gutter); }
+.done-actions .btn { --span: 3; }
+
+/* Pantallas medianas: botones más anchos para que entre el texto */
+@media (max-width: 1439px) {
+  .hero-ctas .btn, .stores .store, .breath .btn { --span: 3; }
+  .play .btn { --span: 4; }
+}
+@media (max-width: 1439px) {
+  .nav .btn-white { width: calc(var(--col) * 2 + var(--gutter)); }
+}
+@media (max-width: 960px) {
+  .filters { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .checkin { grid-template-columns: 1fr; }
+  .checkin > * { grid-column: 1 / -1 !important; }
+  .done-card { width: 100%; }
+  .done-actions .btn { --span: 6; }
+}
+/* Celular: las columnas son muy angostas, los botones van de borde a borde del contenido */
+@media (max-width: 620px) {
+  .nav-pill { padding-left: 14px; min-height: 60px; gap: 10px; }
+  .nav .btn-white { width: auto; padding: 0 16px; }
+  .hero-ctas .btn, .stores .store, .play .btn, .breath .btn, .done-actions .btn { width: 100%; }
+  .filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+/* Ajustes finales de alineación */
+.nav-pill { padding: 0 !important; }
+.nav .logo { margin-left: 22px; }
+.pillars { column-gap: var(--gutter); }
+.pillar:nth-child(odd) { border-right: 0; }
+@media (max-width: 620px) { .nav .logo { margin-left: 14px; } }@media (max-width: 1080px) { .nav .burger { margin-left: auto; } .nav .btn-white { margin-left: 0; } }
+/* ---------- Responsive de botones sobre la grilla ----------
+   ≥1440: 2 col · 1024–1439: 3 col · 621–1023: 6 col (dos botones llenan la fila) · ≤620: ancho completo */
+.hero-ctas .btn, .stores .store, .play .btn, .breath .btn, .done-actions .btn, .nav .btn-white { white-space: nowrap; }
+@media (max-width: 1023px) {
+  .hero-ctas .btn, .stores .store, .play .btn, .done-actions .btn { --span: 6; }
+  .breath .btn { --span: 5; }
+  .hero-ctas, .stores { flex-wrap: nowrap; }
+}
+@media (max-width: 760px) {
+  .nav .btn-white { width: calc(var(--col) * 3 + var(--gutter) * 2); }
+}
+@media (max-width: 620px) {
+  .hero-ctas, .stores { flex-wrap: wrap; }
+  .hero-ctas .btn, .stores .store, .play .btn, .breath .btn, .done-actions .btn { width: 100%; }
+  .nav .btn-white { width: auto; padding: 0 18px; }
+}.ticket .btn, .form .btn { padding-inline: 0; white-space: nowrap; }
+@media (max-width: 1180px) {
+  .event-grid > * { grid-column: 1 / -1 !important; }
+}
